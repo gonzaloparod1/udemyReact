@@ -20,26 +20,45 @@ return (
 }
 */
 
-/*
-const newMessage = {
-    message: 'Hola Mundo',
-    title: 'Gonzalo' 
-};
-*/
+// const newMessage = {
+//     message: 'Hola Mundo',
+//     title: 'soy Gonzalo' 
+// };
 
-const getResult = () => {
-    return a + b;
-}
 
-export const FirstApp = () => {
+// const getResult = () => {
+//     return a + b;
+// }
+
     
+    // console.log(props);
+
+    // if (!title){
+    //     throw new Error('El title no existe');
+    // }
     
+    import PropTypes from 'prop-types';
+
+    export const FirstApp = ({title, subtitle, name}) => {
+
     return (
     <>
-        <h1>{getResult(2,3)}</h1>
+        <h1>CounterApp</h1>
+        {/* <h2>{(newMessage.title)}</h2> */}
         {/* {<code>{JSON.stringify (newMessage)}</code>} */}
-        <p>Soy un subtitulo</p>
+        <p>{value}</p>
     </>
     )
 }
 
+
+FirstApp.propTypes = {
+    value: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+}
+
+FirstApp.defaultProps = {
+    name: 'Gonzalo Parodi',
+    subtitle: 'No hay subtitulo',
+    title: 'No hay titulo',
+}
