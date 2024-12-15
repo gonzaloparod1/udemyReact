@@ -46,7 +46,8 @@ return (
         <h1>CounterApp</h1>
         {/* <h2>{(newMessage.title)}</h2> */}
         {/* {<code>{JSON.stringify (newMessage)}</code>} */}
-        <p>{value}</p>
+        <p> {value} </p>
+
     </>
     )
 }
