@@ -31,7 +31,6 @@ describe('Pruebas en 08-imp-exp', () => {
         const heroes = getHeroesByOwner(owner);
 
         expect(heroes.length).toBe(2);
-
         expect(heroes).toEqual(heroes.filter((heroe) => heroe.owner === owner))
 
     });
