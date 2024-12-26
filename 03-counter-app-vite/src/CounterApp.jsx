@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export const CounterApp = ({value}) => {
 
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(value);
     
     const handleAdd = () => {
         // console.log(event);
@@ -20,6 +20,7 @@ export const CounterApp = ({value}) => {
     return (
     <>
     <h1>CounterApp</h1>
+    
     {/* <h2>{(newMessage.title)}</h2> */}
     {/* {<code>{JSON.stringify (newMessage)}</code>} */}
     <p>{counter}</p>
@@ -28,7 +29,7 @@ export const CounterApp = ({value}) => {
             +1</button>
     <button onClick={handleSubstract} >
             -1</button>
-    <button onClick={handleReset} >
+    <button aria-label="btn-reset" onClick={handleReset} >
             Reset</button>
     </>
 )
