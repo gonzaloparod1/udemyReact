@@ -38,28 +38,29 @@ return (
     // }
     
     import PropTypes from 'prop-types';
+    
 
     export const FirstApp = ({title, subtitle, name}) => {
 
     return (
-    <>
-        <h1>CounterApp</h1>
-        {/* <h2>{(newMessage.title)}</h2> */}
+        <>
+        <h1 data-testid="test-title">{title}</h1>
         {/* {<code>{JSON.stringify (newMessage)}</code>} */}
-        <p> {value} </p>
-
-    </>
+        <p>{subtitle}</p>
+        <p>{subtitle}</p>
+        <p>{name}</p>
+        </>
     )
 }
 
 
 FirstApp.propTypes = {
-    value: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
 }
 
-FirstApp.defaultProps = {
-    name: 'Gonzalo Parodi',
-    subtitle: 'No hay subtitulo',
-    title: 'No hay titulo',
-}
+// FirstApp.defaultProps = {
+//     name: 'Gonzalo Parodi',
+//     subtitle: 'No hay subtitulo',
+//     title: 'No hay titulo',
+// }
